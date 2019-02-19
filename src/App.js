@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import ImageViewer from "./ImageViewer";
+import React, { Component } from 'react'
+import ImageViewer from './ImageViewer'
 
 class App extends Component {
   render() {
@@ -7,8 +7,8 @@ class App extends Component {
       <div>
         <ImageViewer />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
