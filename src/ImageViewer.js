@@ -17,15 +17,32 @@ const ImageViewer = () => {
         }}
         className={"image"}
       />
+      <img
+        src="https://coolsms-storage-test.s3.ap-northeast-2.amazonaws.com/19013037529548/Hos4N.png"
+        alt="image"
+        onClick={e => {
+          setIsOpen(true);
+          setCurrImg(1);
+        }}
+        className={"image"}
+      />
       <ImgsViewer
         imgs={[
+          {
+            src:
+              "https://coolsms-storage-test.s3.ap-northeast-2.amazonaws.com/19013037529548/Hos4N.png"
+          },
           {
             src:
               "https://coolsms-storage-test.s3.ap-northeast-2.amazonaws.com/19013037529548/Hos4N.png"
           }
         ]}
         currImg={currImg}
+        showThumbnails={true}
         isOpen={isOpen}
+        onClickPrev={e => setCurrImg(currImg - 1)}
+        onClickNext={e => setCurrImg(currImg + 1)}
+        onClickThumbnail={index => setCurrImg(index)}
         onClose={e => setIsOpen(false)}
       />
     </div>
